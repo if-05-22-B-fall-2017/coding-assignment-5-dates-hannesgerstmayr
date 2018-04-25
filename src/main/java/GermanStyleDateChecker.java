@@ -14,17 +14,7 @@ import java.util.regex.Pattern;
 public class GermanStyleDateChecker {
 
     public static Matcher getMatcher(String dateString) {
-        Pattern p = Pattern.compile("^(\\d|[0-2]\\d|3[0-1])(\\.|-| )(\\d|0\\d|1[0-2])(\\.|-| )(\\d\\d|19\\d\\d|20\\d\\d)?$"); //statt " " auch \\s möglich
-
-        //
-        //(www\\.)?     optional www. zu beginn
-        //(\\w)+        >=1 beliebige Zeichen
-        //(-(\\w)+)*    0 oder mehrere Teile mit Bindestrichen
-        //(\\.[a-z]+)+  Zum Schluss mindestens eine Domain mit .kleinzeichen
-        //[A-Za-z0-9] => \\w
-        //* => 0 oder mehrmals
-        //+ => 1 oder mehrmals
-        //? => 0 oder 1 mal
+        Pattern p = Pattern.compile("^(\\d|[0-2]\\d|3[0-1])(\\.|-| )(\\d|0\\d|1[0-2])(\\.|-| )((19|20)?\\d\\d)?$");
         Matcher m = p.matcher(dateString);
         return m;
     }
