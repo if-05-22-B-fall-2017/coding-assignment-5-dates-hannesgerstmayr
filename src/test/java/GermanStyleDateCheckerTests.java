@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 
 public class GermanStyleDateCheckerTests {
     /* Write a regular expression that matches German written dates.
-    They are in the form dd.mm.yyyy, where the separator ”.” can
-    also be ”-” or a blank. The leading digit d or m can be omitted.
+    They are in the form dd.mm.yyyy, where the separator "." can
+    also be "-" or a blank. The leading digit d or m can be omitted.
     Valid years are between 1900 and 2099. But the leading two yy
     can also be omitted.
 
